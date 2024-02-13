@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- link style.css file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- include Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <!--PWA-->
+    <script>navigator.serviceWorker.register("sw.js")</script>
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#dbc2f2">
+    <link rel="apple-touch-icon" href="/icon-192.png">
+
+    <title>WeatherNow</title>
+</head>
+
+<body style="background-size: cover;">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md" style="display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: center;
+    align-content: center;">
+
+        <!-- navbar title of the app -->
+        <a class="navbar-brand" href="index.html">WeatherNow</a>
+
+        <!-- "logo" -->
+        <div class="container5">
+            <a href="index.html">
+                <img class="navbar-img" src="b5d6e1a91293d89164238b88f5c5e84d.png" alt="Weather Logo">
+            </a>
+        </div>
+
+        <!-- Search page link -->
+        <div id="navbar_search">
+            <a class="nav_link navbar-item navbar_search" href="search.html">Search</a>
+        </div>
+
+    </nav>
+
+    <!-- upper side of page -->
+    <div class="date-time">
+        <div id="time">
+            <!-- 9:08<span id="am-pm">pm</span> -->
+        </div>
+        <div id="date"> </div>
+    </div>
+
+    <!-- display the current weather section -->
+    <div class="current-weather-data card">
+        <div class="location">
+            <div class="time_zone" id="time_zone">DEFAULT</div>
+        </div>
+
+        <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="weather-icon current_icon"
+            id="current_icon" />
+
+        <div class="current-temp">
+            <div class="item-temp" id="current_temp">DEFAULT</div>
+        </div>
+
+        <!-- more weather data -->
+        <div class="item_current_description" id="item_current_description">
+            <div>DEFAULT</div>
+        </div>
+
+        <section class="more_data">
+            <div class="data">
+                <div>Wind speed</div>
+                <div id="current_wind"> </div>
+            </div>
+            <div class="data">
+                <div>Humidity</div>
+                <div id="current_humidity"> </div>
+            </div>
+            <div class="data">
+                <div>UVI</div>
+                <div id="current_uvi"> </div>
+            </div>
+            <div class="data">
+                <div>Pressure</div>
+                <div id="current_pressure"> </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- lower side of page - the 4-day forecast -->
+    <div class="week-forecast" id="week-forecast">
+        <div class="weather-forecast-day">
+            <div class="day">DEFAULT</div>
+            <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="weather-icon">
+            <div class="temp">Day: DEFAULT</div>
+            <div class="temp">Night: DEFAULT</div>
+        </div>
+
+        <div class="weather-forecast-day">
+            <div class="day">DEFAULT</div>
+            <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="weather-icon">
+            <div class="temp">Day: DEFAULT</div>
+            <div class="temp">Night: DEFAULT</div>
+        </div>
+
+        <div class="weather-forecast-day">
+            <div class="day">DEFAULT</div>
+            <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="weather-icon">
+            <div class="temp">Day: DEFAULT</div>
+            <div class="temp">Night: DEFAULT</div>
+        </div>
+
+        <div class="weather-forecast-day">
+            <div class="day">DEFAULT</div>
+            <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="weather-icon">
+            <div class="temp">Day: DEFAULT</div>
+            <div class="temp">Night: DEFAULT</div>
+        </div>
+    </div>
+
+    <!-- suggestions part -->
+    <div class="card suggestions" id="suggestions" style="margin-bottom: 40px;">
+        <div class="title">Suggestions</div>
+        <div class="suggestions_items" id="today"> </div>
+    </div>
+
+    <div>.</div>
+
+    <!-- link the javascript files and libraries -->
+
+    <!-- MomentJS - a time and date formatting and calculation library -->
+    <!-- used for the 4-day weather forecast -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+        integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Luxon - a time and date formatting and calculation library -->
+    <!-- <script src="luxon.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/2.0.2/luxon.min.js"
+        integrity="sha512-frUCURIeB0OKMPgmDEwT3rC4NH2a4gn06N3Iw6T1z0WfrQZd7gNfJFbHrNsZP38PVXOp6nUiFtBqVvmCj+ARhw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script1.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- link style.css file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- include Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <!-- PWA -->
+    <script>navigator.serviceWorker.register("sw.js")</script>
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#dbc2f2">
+    <link rel="apple-touch-icon" href="/icon-192.png">
+
+    <title>Search</title>
+</head>
+
+<body style="background-size: cover;">
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md" style="display: flex;
+     flex-wrap: inherit;
+     align-items: center;
+     justify-content: center;
+     align-content: center;">
+
+        <!-- navbar title of the app -->
+        <a class="navbar-brand" href="index.html">WeatherNow</a>
+
+        <!-- "logo" -->
+        <div class="container5">
+            <a href="index.html">
+                <img class="navbar-img" src="b5d6e1a91293d89164238b88f5c5e84d.png" alt="Weather Logo">
+            </a>
+        </div>
+
+        <!-- Search page link -->
+        <div id="navbar_search">
+            <a class="nav_link navbar-item navbar_search" href="search.html">Search</a>
+        </div>
+    </nav>
+
+    <!-- space between divs -->
+    <div style="margin-top: 50px;">.</div>
+
+    <!-- card -->
+    <div class="current-weather-data card">
+        <section class="input">
+            <p>Enter city name to see details about weather!</p>
+            <div class="search"><input id="search-bar" class="search-bar" type="text" placeholder="Enter city name">
+                <button><svg viewBox="0 0 1024 1024">
+                        <path class="path1"
+                            d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z">
+                        </path>
+                    </svg></button>
+            </div>
+            <p class="attention">The name of the city must be correct. Please check it on <a
+                    href="https://en.wikipedia.org/wiki/Lists_of_cities_by_country">the following page</a> if unsure.
+            </p>
+        </section>
+
+        <section class="display_data">
+            <div class="location">
+                <div class="city_name" id="city_name">DEFAULT</div>
+            </div>
+
+            <img class="weather-icon current_icon" id="current_icon" src="http://openweathermap.org/img/wn/10d@2x.png"
+                alt="weather icon" />
+
+            <div class="current-temp">
+                <div class="item_temp" id="item_temp">DEFAULT</div>
+            </div>
+
+            <div class="item_current_description" id="item_current_description">
+                <div>DEFAULT</div>
+            </div>
+
+            <div class="data">
+                <div>Wind speed</div>
+                <div id="current_wind"> </div>
+            </div>
+            <div class="data">
+                <div>Humidity</div>
+                <div id="current_humidity"> </div>
+            </div>
+            <div class="data">
+                <div>Pressure</div>
+                <div id="current_pressure"> </div>
+            </div>
+        </section>
+    </div>
+
+    <div>. </div>
+</body>
+
+<script src="script2.js"> </script>
+
+</html>
